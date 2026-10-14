@@ -1,0 +1,152 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: #f7f8fc;
+  background-color: #070a2b;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.17) 0.8px, transparent 0.8px);
+  background-size: 26px 26px;
+}
+
+.heroInner {
+  min-height: 35rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(19rem, 0.85fr);
+  align-items: center;
+  gap: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.heroCopy { position: relative; z-index: 1; max-width: 42rem; }
+
+.eyebrow,
+.sectionEyebrow,
+.solutionLabel {
+  margin: 0 0 1.2rem;
+  color: #aebce8;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.heroCopy h1 {
+  margin: 0;
+  color: #f7f8fc;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.heroCopy h1 span { color: #f5900e; }
+
+.heroDescription {
+  max-width: 38rem;
+  margin: 1.5rem 0 0;
+  color: #c1c7da;
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+.actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+
+.primaryAction,
+.secondaryAction {
+  display: inline-flex;
+  min-height: 2.625rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.primaryAction {
+  color: #11142d;
+  background: #f5900e;
+}
+
+.primaryAction:hover { border-color: #ffad31; color: #11142d; background: #ffad31; text-decoration: none; }
+.secondaryAction { border-color: rgba(255, 255, 255, 0.36); color: #f7f8fc; }
+.secondaryAction:hover { border-color: #ffad31; color: #ffad31; text-decoration: none; }
+.heroArt { display: flex; align-items: center; justify-content: center; }
+.heroArt img { display: block; width: min(100%, 25rem); height: auto; filter: drop-shadow(0 0 2.5rem rgba(245, 144, 14, 0.12)); }
+.trustStrip { color: #f7f8fc; background: #101431; }
+.trustInner { display: flex; min-height: 4rem; align-items: center; justify-content: center; gap: 1.25rem; font-size: 0.9rem; font-weight: 600; }
+.trustDivider { width: 4px; height: 4px; border-radius: 50%; background: #f5900e; }
+.solutionsSection, .docsSection { padding: 4rem 0; }
+.solutionsSection { background: #fbfbfd; }
+.sectionHeading { max-width: 43rem; margin-bottom: 2.25rem; }
+.sectionEyebrow { margin-bottom: 0.75rem; color: #a96000; }
+.sectionHeading h2, .docsIntro h2 { margin: 0; color: #11142d; font-size: 2rem; font-weight: 800; line-height: 1.15; }
+.sectionHeading > p:last-child, .docsIntro > p:not(.sectionEyebrow) { margin: 0.9rem 0 0; color: #596174; line-height: 1.75; }
+.solutionGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.solution { display: flex; min-height: 16rem; flex-direction: column; align-items: flex-start; padding: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 14px; color: #f7f8fc; background-color: #070a2b; background-image: radial-gradient(rgba(255, 255, 255, 0.1) 0.7px, transparent 0.7px); background-size: 18px 18px; text-decoration: none; transition: border-color 160ms ease, transform 160ms ease; }
+.solution:hover { transform: translateY(-3px); border-color: #f5900e; color: #f7f8fc; text-decoration: none; }
+.solutionLabel { margin-bottom: 0.85rem; color: #ffad31; font-size: 0.7rem; }
+.solution h3 { margin: 0; color: #f7f8fc; font-size: 1.5rem; font-weight: 600; }
+.solution p { margin: 0.65rem 0 1.5rem; color: #c1c7da; line-height: 1.6; }
+.textLink { display: inline-flex; gap: 0.5rem; margin-top: auto; color: #ffad31; font-size: 0.875rem; font-weight: 600; }
+.docsSection { color: #f7f8fc; background: #070a2b; }
+.docsInner { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); align-items: center; gap: 5rem; }
+.docsIntro h2 { color: #f7f8fc; }
+.docsIntro > p:not(.sectionEyebrow) { color: #c1c7da; }
+.docsAction { display: inline-flex; gap: 0.6rem; margin-top: 1.5rem; color: #ffad31; font-weight: 700; }
+.docsAction:hover { color: #ffd38a; }
+.docLinks { border-top: 1px solid rgba(255, 255, 255, 0.18); }
+.docLinks a { display: grid; grid-template-columns: 2.5rem 1fr 1rem; align-items: center; gap: 0.8rem; padding: 1.2rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.18); color: #f7f8fc; text-decoration: none; }
+.docLinks a > span:first-child { color: #f5900e; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; }
+.docLinks a > span:last-child { color: #aebce8; }
+.docLinks a:hover strong { color: #ffad31; }
+
+@media screen and (max-width: 996px) {
+  .heroInner { min-height: 31rem; grid-template-columns: minmax(0, 1.1fr) minmax(14rem, 0.9fr); gap: 0.5rem; }
+  .docsInner { gap: 3rem; }
+}
+
+@media screen and (max-width: 700px) {
+  .heroInner { min-height: 0; grid-template-columns: 1fr; gap: 0; padding-top: 3.75rem; padding-bottom: 2.5rem; }
+  .heroCopy h1 { font-size: 2.5rem; line-height: 1.05; }
+  .heroDescription { font-size: 0.98rem; }
+  .heroArt { justify-content: flex-start; margin-top: 1.75rem; }
+  .heroArt img { width: 10rem; }
+  .trustInner { min-height: 3.5rem; gap: 0.75rem; font-size: 0.78rem; }
+  .solutionsSection, .docsSection { padding: 3rem 0; }
+  .sectionHeading h2, .docsIntro h2 { font-size: 1.75rem; }
+  .solutionGrid, .docsInner { grid-template-columns: 1fr; }
+  .solution { min-height: 14rem; }
+  .docsInner { gap: 2rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .solution { transition: none; }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
