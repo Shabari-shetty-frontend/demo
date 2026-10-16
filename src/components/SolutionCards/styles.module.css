@@ -1,0 +1,72 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 2rem;
+}
+
+.card {
+  display: flex;
+  min-height: 12rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 1.25rem;
+  border: 1px solid var(--onam-line);
+  border-top: 3px solid var(--onam-orange);
+  border-radius: 6px;
+  color: var(--onam-ink);
+  background: #fff;
+  text-decoration: none;
+  transition: border-color 150ms ease, transform 150ms ease;
+}
+
+.card:hover {
+  border-color: var(--onam-orange);
+  color: var(--onam-ink);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.label {
+  color: var(--onam-muted);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.model {
+  color: var(--onam-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.action {
+  display: inline-flex;
+  gap: 0.4rem;
+  margin-top: auto;
+  color: var(--ifm-link-color);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 10rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}
